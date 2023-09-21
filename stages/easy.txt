@@ -1,0 +1,6 @@
+stages/easy/stage 0.txt
+stages/easy/stage 1.txt
+stages/easy/stage 2.txt
+stages/easy/stage 3.txt
+stages/easy/stage 4.txt
+
