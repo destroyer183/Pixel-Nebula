@@ -14,4 +14,4 @@ use up and down arrow keys to navigate up and down the menus
 
 use left and right arrow keys to select the game type, which is the second main menu option.
 
-use WASD to move, spacebar to shoot, and press shift if you want to move slowly to dodge bullets easier.
+use WASD to move, spacebar to shoot, and press shift if you want to move slower for more precision when dodging bullets.
