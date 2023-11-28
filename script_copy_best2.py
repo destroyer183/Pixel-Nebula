@@ -10,6 +10,7 @@ py.init()
 # start the game in endless mode for a bug
 
 # notes
+# maybe repurpose the boss explosion sprites and use them as player death sprites
 # make sure win and lose screens work properly
 # add in bg animations
 
@@ -114,7 +115,7 @@ reset_arrays()
 
 # use a variable to go through the directory
 
-dir = 'C:/Users/aob/Documents/Coding Stuff/python stuff/school stuff/Computer Culminating/'
+dir = 'C:/Users/aob/Documents/Coding Stuff/school stuff/python stuff/school stuff/Computer Culminating/'
 
 # menu sprites
 dict['sprites']['menu']['bg']               = py.image.load("assets/HUD/Pixel Nebula Title HUD.png").convert_alpha()
