@@ -112,7 +112,7 @@ reset_arrays()
 
 # use a variable to go through the directory
 
-dir = 'C:/Users/aob/Documents/Coding Stuff/python stuff/school stuff/Computer Culminating/'
+dir = 'C:/Users/aob/Documents/Coding Stuff/school stuff/grade 10/python stuff/Computer Culminating/Pixel-Nebula/'
 
 # menu sprites
 dict['sprites']['menu']['bg']               = py.image.load(dir + "assets/HUD/Pixel Nebula Title HUD.png").convert_alpha()
@@ -359,7 +359,7 @@ map_buttons    = py.image.load(dir + "assets/HUD/Pixel Nebula Map Buttons.png").
 
 # sprite dict arrays
 dict['sprites']['bgs']['front']      = [bg0, bg1, bg2, bg3, bg4, bg5, bg6, bg7]
-dict['sprites']['bgs']['backs']       = [bg0_back, bg1_back, bg2_back, bg3_back, bg4_back, bg5_back, bg6_back, bg7_back]
+dict['sprites']['bgs']['backs']      = [bg0_back, bg1_back, bg2_back, bg3_back, bg4_back, bg5_back, bg6_back, bg7_back]
 dict['sprites']['lives']             = [lives0, lives1, lives2, lives3]
 dict['sprites']['player']['f']       = [player0, player1, player2, player3]
 dict['sprites']['player']['l']       = [player0_left, player1_left, player2_left, player3_left]
