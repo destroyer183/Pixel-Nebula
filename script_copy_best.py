@@ -12,6 +12,15 @@ py.init()
 # add in bg animations
 
 
+'''
+
+THERE IS A BUG WITH THE BG LOADING PROCESS
+
+SET THE STAGE NUMBER TO 6, THEN PLAY THROUGH THE LEVEL, AND START THE NEXT LEVEL
+
+'''
+
+
 # this makes sure the window is scaled correctly when it is displayed.
 if os.name == "nt":
     try:
