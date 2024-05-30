@@ -67,7 +67,7 @@ events         = py.event.get()
 keys           = py.key.get_pressed()
 
 # turn off stuff
-dict['game data']['disable player death'] = False
+dict['game data']['disable player death'] = True
 dict['game data']['draw hitboxes'] = True
 
 # menu stuff
@@ -1305,17 +1305,18 @@ def create_enemies(stage_number: int, wave_number: int, random=False):
 
         wave  = stage[wave_number]
 
-
-
-    print('total waves: ' + str(len(stage)))
-
-    dict['enemy data']['total enemies'] += len(wave['x'])
+        print('total waves: ' + str(len(stage)))
 
 
 
     if random:
 
         wave = generate_random_wave()
+
+
+
+    # if this is commented out during endless mode, new enemies spawn every game loop lmao
+    dict['enemy data']['total enemies'] += len(wave['x'])
 
 
 
@@ -1355,14 +1356,17 @@ def get_max_wave(stage):
 
 def draw_bg():
 
-    if   dict['game data']['stage num'] <   1: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][0]
-    elif dict['game data']['stage num'] <   2: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][1]
-    elif dict['game data']['stage num'] <   3: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][2]
-    elif dict['game data']['stage num'] <   4: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][3]
-    elif dict['game data']['stage num'] <   5: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][4]
-    elif dict['game data']['stage num'] <   6: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][5]
-    elif dict['game data']['stage num'] <   7: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][6]
-    elif dict['game data']['stage num'] ==  8: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][7]
+    dict['bg data']['bg'] = dict['sprites']['bgs']['front'][dict['game data']['stage num'] - 1]
+
+    # if   dict['game data']['stage num'] <   1: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][0]; print('\n\n\n1\n\n\n')
+    # elif dict['game data']['stage num'] <   2: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][1]; print('\n\n\n2\n\n\n')
+    # elif dict['game data']['stage num'] <   3: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][2]; print('\n\n\n3\n\n\n')
+    # elif dict['game data']['stage num'] <   4: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][3]; print('\n\n\n4\n\n\n')
+    # elif dict['game data']['stage num'] <   5: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][4]; print('\n\n\n5\n\n\n')
+    # elif dict['game data']['stage num'] <   6: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][5]; print('\n\n\n6\n\n\n')
+    # elif dict['game data']['stage num'] <   7: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][6]; print('\n\n\n7\n\n\n')
+    # elif dict['game data']['stage num'] ==  8: dict['bg data']['bg'] = dict['sprites']['bgs']['front'][7]; print('\n\n\n8\n\n\n')
+    # else: print('\n\n\n\n\n    NO BG WAS FOUND\n\n\n\n\n')
 
     dict['animations']['bg delay'] = 1000 / len(dict['sprites']['bgs'])
 
