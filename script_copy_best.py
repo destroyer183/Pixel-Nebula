@@ -112,9 +112,9 @@ reset_arrays()
 
 # use a variable to go through the directory
 
-dir = 'C:/Users/aob/Documents/Coding Stuff/school stuff/grade 10/python stuff/Computer Culminating/Pixel-Nebula/'
 dir = os.path.dirname(os.path.realpath(__file__))
 dir = dir.replace('\\', '/')
+dir += '/'
 
 # menu sprites
 dict['sprites']['menu']['bg']               = py.image.load(dir + "assets/HUD/Pixel Nebula Title HUD.png").convert_alpha()
